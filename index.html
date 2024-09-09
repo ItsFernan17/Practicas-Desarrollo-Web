@@ -1,0 +1,78 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Minecraft</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="estilos.css">
+    <script src="funciones.js"></script>
+</head>
+<body>
+    <div class="botonInicio">
+        <button onclick="empezarJuego()">Empezar Quiz</button>
+    </div>
+    <div class="certificado1">
+        <img src="img/certificado.jpg">
+    </div>
+    <div class="certificado2">
+        <img src="img/certificado2.jpg">
+    </div>
+    <div class="certificado3">
+        <img src="img/certificado3.jpg">
+    </div>
+    <div class="contenedorPreguntas">
+        <header>
+            <div class="titulo">¿Que tanto conces de Minecraft?</div>
+            <div class="contador">
+                <div class="tiempoTexto">Tiempo</div>
+                <div class="contadorTiempo">60s</div>
+            </div>
+            <div class="lineaTiempo"></div>
+        </header>
+        <form>
+            <div id="pregunta">
+                <label>¿Pregunta?</label>
+            </div>
+            <div class="listaRespuestas">
+                <div class="respuesta">
+                    <label>
+                        <input type="radio" name="r1" value="a">
+                        Respuesta 1
+                    </label>
+                </div> 
+                <div class="respuesta">
+                    <label>
+                        <input type="radio" name="r1" value="b">
+                        Respuesta 2
+                    </label>  
+                </div> 
+                <div class="respuesta">
+                    <label>
+                        <input type="radio" name="r1">
+                        Respuesta 3
+                    </label> 
+                </div>     
+            </div>
+        </form>
+        <footer>
+            <div class="cantidadPreguntas">
+                <span>
+                    <p>0</p>de<p>0</p>Preguntas
+                </span>
+            </div>
+            <button class="siguientePregunta" onclick="siguientePregunta()">Siguiente</button>
+        </footer>
+    </div>
+    <div class="resultado">
+        <div class="icono">
+            <i class="fa-regular fa-face-sad-cry"></i>
+        </div>
+        <div class="mensajeCompletar">¡Quiz Completado!</div>
+        <div class="punteoFinal">
+            <span>No lograste el 60%</span>
+            <span>Preguntas Correctas: <p>2</p> de <p>5</p></span>
+            <span>¡Vuelte a Intentarlo!</span>
+        </div>
+    </div>
+</body>
+</html>

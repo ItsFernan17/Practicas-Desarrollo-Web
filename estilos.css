@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    background-image: url('img/fondo.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.botonInicio, .contenedorPreguntas, .resultado
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0px px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.botonInicio button
+{
+    font-size: 25px;
+    font-weight: 500;
+    color: #167788;
+    padding: 15px 30px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background: #fff;
+    cursor: pointer;
+}
+
+.contenedorPreguntas
+{
+    width: 550px;
+    background: #fff;
+    border-radius: 10px;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(1.2);
+    opacity: 0;
+}
+
+.contenedorPreguntas header
+{
+    position: relative;
+    z-index: 99;
+    height: 70px;
+    padding: 0 30px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 3px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+.contenedorPreguntas header .titulo
+{
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.contenedorPreguntas header .contador
+{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 145px;
+    height: 45px;
+    background: #7bb2b8;
+    border: 1px solid #a3cbd0;
+    border-radius: 5px;
+    padding: 0 8px;
+}
+
+.contenedorPreguntas header .lineaTiempo
+{
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    height: 3px;
+    background: #167788;
+}
+
+.contenedorPreguntas header .tiempoTexto
+{
+    font-weight: 400;
+    font-size: 17px;
+    user-select: none;
+}
+
+.contenedorPreguntas header .contadorTiempo
+{
+    font-size: 18px;
+    font-weight: 500;
+    background: #587779;
+    height: 30px;
+    width: 45px;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 5px;
+    border: 1px solid #587779;
+    user-select: none;
+}
+
+.contenedorPreguntas form
+{
+    padding: 25px 30px 20px 30px;
+    background: #fff;
+
+}
+
+.contenedorPreguntas form #pregunta
+{
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.contenedorPreguntas form .listaRespuestas
+{
+    padding: 20px 0;
+    display: block;
+}
+
+form .listaRespuestas .respuesta
+{
+    background: #daeff0;
+    border: 1px solid #7bb2b8;
+    border-radius: 5px;
+    padding: 8px 15px;
+    margin-bottom: 15px;
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: all 0.3s ease;
+}
+
+form .listaRespuestas .respuesta:hover{
+    color: #004085;
+    background: #cce5ff;
+    border-color: #b8daff;
+    cursor: pointer;
+}
+.listaRespuestas .respuesta:last-child
+{
+    margin-bottom: 0px;
+}
+
+.contenedorPreguntas footer
+{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+.contenedorPreguntas footer .cantidadPreguntas span
+{
+    display: flex;
+    user-select: none;
+}
+
+footer .cantidadPreguntas span p
+{
+    font-weight: 500;
+    padding: 0 5px;
+}
+
+.cantidadPreguntas span p:first-child
+{
+    padding-left: 0px;
+}
+
+footer .siguientePregunta
+{
+    height: 40px;
+    padding: 0 13px;
+    font-size: 18px;
+    font-weight: 400;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #167788;
+    border-radius: 5px;
+    border: 1px solid #167788;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+footer .siguientePregunta:hover
+{
+    background: #587779;
+}
+
+.resultado
+{
+    background: #fff;
+    width: 450px;
+    padding: 25px 30px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    flex-direction: column;
+    pointer-events: none;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(1.2);
+}
+
+.resultado .icono
+{
+    font-size: 100px;
+    color: #7bb2b8;
+    margin-bottom: 10px;
+}
+
+.resultado .mensajeCompletar
+{
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.resultado .punteoFinal span
+{
+    display: flex;
+    margin: 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+    justify-content: center;
+}
+
+.punteoFinal span p
+{
+    font-weight: 600;
+    padding: 0 4px;
+}
+
+.listaRespuestas .respuesta.correcta
+{
+    color: #155724;
+    background: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.listaRespuestas .respuesta.incorrecta
+{
+    color: #721c24;
+    background: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.listaRespuestas .respuesta.deshabilitar
+{
+    pointer-events: none;
+}
+
+.resultado.mostrarResultado
+{
+    z-index: 5;
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1.8);
+}
+
+footer .siguientePregunta.sinTiempo
+{
+    pointer-events: none;
+}
+
+.certificado1, .certificado2, .certificado3
+{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2),
+                0px px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+ .certificado1 img {
+    width: 130%;
+    border-radius: 10px;
+    display: none;
+    margin: 0 auto;
+}
+
+ .certificado1 img.verCertificado {
+    display: block;
+    transition: all 0.3s ease;
+
+}
+
+.certificado2 img {
+    width: 130%;
+    border-radius: 10px;
+    display: none;
+    margin: 0 auto;
+}
+
+ .certificado2 img.verCertificado {
+    display: block;
+    transition: all 0.3s ease;
+
+}
+
+.certificado3 img {
+    width: 130%;
+    border-radius: 10px;
+    display: none;
+    margin: 0 auto;
+}
+
+ .certificado3 img.verCertificado {
+    display: block;
+    transition: all 0.3s ease;
+
+}
+
+
+.botonInicio button.verBoton
+{
+    display: none;
+}
