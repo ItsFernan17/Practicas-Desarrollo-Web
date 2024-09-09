@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset='utf-8'>
+    <title>INSIVUMEH - Clima</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel="stylesheet" href="estilos.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="barraMenu">
+        <div class="barraMenuEncabezado">
+            <div class="imagen">
+                <img src="logo.png">
+            </div>
+            <h3>INSIVUMEH</h3>
+            <span>ESTACIÓN METEREOLÓGICA</span>
+        </div>
+    </div>
+    <div class="sliderMenu">
+        <i class="fa-regular fa-compass"></i>
+        <span>Menu > Clima </span>
+    </div>
+    <div class="contenedorTitulo">
+        <div class="contenedorTitulo">
+            <div class="tituloCentro">
+                <i class="fa-solid fa-cloud"></i>
+                <span>Clima Internacional</span>
+            </div>
+        </div>
+    </div>
+    <div class="contenedor">
+        <div class="busqueda">
+            <input type="text" placeholder="País/Ciudad" spellcheck="false">
+            <button id="boton"><img src="buscar.png"></button>
+        </div>
+        <div class="ciudadNoEncontrada">
+            <p>La Ciudad/País no es Válido</p>
+        </div>
+        <div class="clima">
+            <img src="despejado.png" id="iconoClima">
+            <h1 id="temperatura">30°C</h1>
+            <h2 id="ciudad">Guatemala</h2>
+            <div class="informacion">
+                <div class="detallesClima">
+                    <img src="humedad.png">
+                    <div>
+                        <p id="textoHumedad">78%</p>
+                        <p>Humedad</p>
+                    </div>
+                </div>
+                <div class="detallesClima">
+                    <img src="viento.png">
+                    <div>
+                        <p id="textoViento">20 km/h</p>
+                        <p>Viento</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='script.js'></script>
+</body>
+</html>
