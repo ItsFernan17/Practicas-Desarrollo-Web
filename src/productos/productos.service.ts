@@ -19,7 +19,7 @@ export class ProductosService {
         const productoExistente = await this.productoRepository.findOne({where: {id}})
         
         if(!productoExistente){
-            return new HttpException('El Producto no existe en el Sistema!', HttpStatus.NOT_FOUND)
+            return new HttpException('El producto con el ID proporcionado no existe en la base de datos.', HttpStatus.NOT_FOUND)
         }
 
         return productoExistente;
@@ -33,7 +33,7 @@ export class ProductosService {
         })
         
         if(productoExistente){
-            return new HttpException('El Producto ya existe!', 400)
+            return new HttpException('El producto con el ID proporcionado no existe en la base de datos.', 400)
         }
         const newProducto = this.productoRepository.create(
             {
@@ -48,7 +48,7 @@ export class ProductosService {
         const productoExistente = await this.productoRepository.findOne({where: {id}});
 
         if(!productoExistente){
-            return new HttpException('El Producto no existe en el Sistema!', HttpStatus.NOT_FOUND);
+            return new HttpException('El producto con el ID proporcionado no existe en la base de datos.', HttpStatus.NOT_FOUND);
         }
 
         const updateProducto = Object.assign(productoExistente, updateProductoDto);
@@ -59,7 +59,7 @@ export class ProductosService {
         const resultado = await this.productoRepository.delete({id});
 
         if(resultado.affected === 0){
-            return new HttpException('El Producto no existe en el Sistema!', HttpStatus.NOT_FOUND);
+            return new HttpException('El producto con el ID proporcionado no existe en la base de datos.', HttpStatus.NOT_FOUND);
         }
         return resultado;
     }
