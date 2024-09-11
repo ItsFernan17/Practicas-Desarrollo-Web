@@ -33,7 +33,7 @@ export class ProductosService {
         })
         
         if(productoExistente){
-            return new HttpException('El producto con el ID proporcionado no existe en la base de datos.', 400)
+            return new HttpException('El producto ya existe en la base de datos.', 409)
         }
         const newProducto = this.productoRepository.create(
             {
